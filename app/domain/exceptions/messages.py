@@ -11,3 +11,11 @@ class TextTooLongException(ApplicationException):
     @property
     def message(self):
         return f"Message text too long: {self.text[:255]}..."
+
+
+@dataclass(eq=False)
+class EmptyTextError(ApplicationException):
+
+    @property
+    def message(self):
+        return "Text can't be empty"
