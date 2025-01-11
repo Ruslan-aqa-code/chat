@@ -13,7 +13,7 @@ class Text(BaseValueObject):
         if not self.value:
             raise EmptyTextException()
 
-    def as_generic_type(self):
+    def as_generic_type(self) -> str:
         return self.value
 
 
